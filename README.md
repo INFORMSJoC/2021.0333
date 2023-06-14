@@ -133,7 +133,7 @@ Remark:
 * Update parameters in the same way when comparing;
 * The independent macro experiments can run in parallel.
 
-Get into folder [Top-m arms identification](/App/Top-m%20arms%20identification). Run [EAm.m](/main/Exp/EAm.m) for *EA*, [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*, [pGapE.m](/App/Top-m%20arms%20identification/pGapE.m) for *Gap-E*, [pSAR.m](/App/Top-m%20arms%20identification/pSAR.m) for *SAR*,[pSR.m](/App/Top-m%20arms%20identification/pSR.m) for *SR*.
+Get into folder [Top-m arms identification](/App/Top-m%20arms%20identification). Run [EAm.m](/main/Exp/EAm.m) for *EA*, [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*, [pGapE.m](/App/Top-m%20arms%20identification/pGapE.m) for *Gap-E*, [pSAR.m](/App/Top-m%20arms%20identification/pSAR.m) for *SAR*, [pSR.m](/App/Top-m%20arms%20identification/pSR.m) for *SR*.
 
 * Set corresponding input parameters for all policies.
 
