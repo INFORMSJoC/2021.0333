@@ -2,7 +2,7 @@
 
 # Asymptotically Optimal Sampling Policy for Selecting Top-m Alternatives
 
-This repository contains supporting material for the paper [Asymptotically Optimal Sampling Policy for Selecting Top-m Alternatives](https://doi.org/????) by Gongbo Zhang, Yijie Peng<sup>*</sup>, Jianghua Zhang, and Enlu Zhou.
+This repository contains supporting material for the paper [Asymptotically Optimal Sampling Policy for Selecting Top-m Alternatives](https://doi.org/10.1287/ijoc.2021.0333) by Gongbo Zhang, Yijie Peng<sup>*</sup>, Jianghua Zhang, and Enlu Zhou.
 
 ## Disclaimer
 
@@ -12,19 +12,22 @@ WARNING: These codes are written only for the purpose of demonstration and verif
 
 ## Cite
 
-To cite this code, please cite the paper using its DOI and the code itself, using the following DOI: DOI:10.1287/ijoc.2021.0333.cd
+To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs:
+
+https://doi.org/10.1287/ijoc.2021.0333
+
+https://doi.org/10.1287/ijoc.2021.0333.cd 
 
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
-@article{ZhangPengZhangZhou2021.0333,
+@article{zhang2022asymptotically,
   author = {Zhang, Gongbo and Peng, Yijie and Zhang, Jianghua and Zhou, Enlu},
   publisher = {INFORMS Journal on Computing},
   title = {Asymptotically Optimal Sampling Policy for Selecting Top-m Alternatives},
   year = {2023},
   doi = {10.1287/ijoc.2021.0333.cd},
-  url = {https://github.com/INFORMSJoC/2021.0333},
-  note={available for download at https://github.com/INFORMSJoC/2021.0333}
+  note={Available for download at https://github.com/INFORMSJoC/2021.0333}
 }
 ```
 
@@ -32,33 +35,33 @@ Below is the BibTex for citing this snapshot of the respoitory.
 
 This repository includes
 
-1. The [main](main) folder contains the MATLAB implementations of the numerical experiments in the mian text.
-    * The [Exp](main/Exp) folder contains codes for compared sampling policies;
-    * The [Exp5](main/Exp5) folder contains codes for numerical experiments in Section 5.2 of the main text.
-2. The [App](App) folder contains the MATLAB implementations of the numerical experiments in the online Appendix.
-    * The [OCBA](App/OCBA) folder contains codes for numerical experiments in Section A.1 of the online Appendix;
-    * The [Sampling ratio](App/Sampling%20ratio) folder contains codes for numerical experiments in Section A.3 of the online Appendix;
-    * The [Non-normal](App/Non-normal) folder contains codes for numerical experiments in Section A.4.2 of the online Appendix;
-    * The [Top-m arms identification](App/Top-m%20arms%20identification) folder contains codes for numerical experiments in Section A.4.3 of the online Appendix.
-3. The [Results](Results) folder contains raw results of our numerical experiments.
+1. The [main](src/main) folder contains the MATLAB implementations of the numerical experiments in the mian text.
+    * The [Exp](src/main/Exp) folder contains codes for compared sampling policies;
+    * The [Exp5](src/main/Exp5) folder contains codes for numerical experiments in Section 5.2 of the main text.
+2. The [App](src/App) folder contains the MATLAB implementations of the numerical experiments in the online Appendix.
+    * The [OCBA](src/App/OCBA) folder contains codes for numerical experiments in Section A.1 of the online Appendix;
+    * The [Sampling ratio](src/App/Sampling%20ratio) folder contains codes for numerical experiments in Section A.3 of the online Appendix;
+    * The [Non-normal](src/App/Non-normal) folder contains codes for numerical experiments in Section A.4.2 of the online Appendix;
+    * The [Top-m arms identification](src/App/Top-m%20arms%20identification) folder contains codes for numerical experiments in Section A.4.3 of the online Appendix.
+3. The [results](results) folder contains raw results of our numerical experiments.
 
 
 ## Installation
 
 * The codes were written and run in MATLAB R2021a, on Windows 10 Home 64-bit OS, with Intel i5-11300H CPU @ 3.10 GHz, 16 GB RAM.
 
-* To install the MATLAB codes, just copy the entire folder [main](main) and [App](App), respectively, into your MATLAB directory, or change the path of MATLAB to the folder [main](main) and [App](App), respectively.
+* To install the MATLAB codes, just copy the entire folder [main](src/main) and [App](src/App), respectively, into your MATLAB directory, or change the path of MATLAB to the folder [main](src/main) and [App](src/App), respectively.
 
 ## Details
 
 #### Numerical Experiments in Section 5.1 of the main text
 
-* The function [AOAPm.m](/main/Exp/AOAPm.m) is the proposed policy of our work;
-* The function [EAm.m](/main/Exp/EAm.m) is a compared policy called equal allocation (EA);
-* The function [OCBAmsa.m](/main/Exp/OCBAmsa.m) is a modified compared policy from Chen et al. (2008), where a better separating parameter that improves performance of the original policy is sequentially implemented;
-* The function [OCBAmjia.m](/main/Exp/OCBAmjia.m) is a compared policy from Zhang et al. (2012,2015);
-* The function [OCBAss.m](/main/Exp/OCBAss.m) is a compared policy from Gao and Chen (2015);
-* The function [OCBASSS.m](/main/Exp/OCBASSS.m) is a compared policy from Gao and Chen (2016).
+* The function [AOAPm.m](src/main/Exp/AOAPm.m) is the proposed policy of our work;
+* The function [EAm.m](src/main/Exp/EAm.m) is a compared policy called equal allocation (EA);
+* The function [OCBAmsa.m](src/main/Exp/OCBAmsa.m) is a modified compared policy from Chen et al. (2008), where a better separating parameter that improves performance of the original policy is sequentially implemented;
+* The function [OCBAmjia.m](src/main/Exp/OCBAmjia.m) is a compared policy from Zhang et al. (2012,2015);
+* The function [OCBAss.m](src/main/Exp/OCBAss.m) is a compared policy from Gao and Chen (2015);
+* The function [OCBASSS.m](src/main/Exp/OCBASSS.m) is a compared policy from Gao and Chen (2016).
 
 Remark:
 * The policies can adjust the ascending or descending performance of alternatives;
@@ -67,79 +70,79 @@ Remark:
 * Update parameters in the same way when comparing;
 * The independent macro experiments can run in parallel.
 
-Get into the folder [Exp](/main/Exp). Run [EAm.m](/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*.
+Get into the folder [Exp](src/main/Exp). Run [EAm.m](src/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](src/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](src/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](src/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](src/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](src/main/Exp/AOAPm.m) for *AOAm*.
 
-* Set corresponding input parameters for all policies in the folder [Exp](/main/Exp).
+* Set corresponding input parameters for all policies in the folder [Exp](src/main/Exp).
 
 #### Numerical Experiments in Section 5.2 of the main text
 
-* The function [evacuation.m](/main/Exp5/evacuation.m) is a simulator of the evacuation network;
-* The function [Untitled1.m](/main/Exp5/Untitled1.m) estimates the mean performance of each evacuation plan.
+* The function [evacuation.m](src/main/Exp5/evacuation.m) is a simulator of the evacuation network;
+* The function [Untitled1.m](src/main/Exp5/Untitled1.m) estimates the mean performance of each evacuation plan.
 
-Get into the folder [Exp5](/main/Exp5). Run [EAm.m](/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*.
+Get into the folder [Exp5](src/main/Exp5). Run [EAm.m](src/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](src/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](src/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](src/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](src/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](src/main/Exp/AOAPm.m) for *AOAm*.
 
-* Set corresponding input parameters for all policies in the folder [Exp5](/main/Exp5);
-* The input parameter *truemu* of each policy is calculated by running [Untitled1.m](/main/Exp5/Untitled1.m), which calls [evacuation.m](/main/Exp5/evacuation.m) during execution.
+* Set corresponding input parameters for all policies in the folder [Exp5](src/main/Exp5);
+* The input parameter *truemu* of each policy is calculated by running [Untitled1.m](src/main/Exp5/Untitled1.m), which calls [evacuation.m](src/main/Exp5/evacuation.m) during execution.
 
 #### Numerical Experiments in Section A.1 of the online Appendix
 
-* The function [OCBAm.m](/App/OCBA/OCBAm.m) is a compared policy from Chen et al. (2008);
+* The function [OCBAm.m](src/App/OCBA/OCBAm.m) is a compared policy from Chen et al. (2008);
 
-* The function [OCBAms.m](/App/OCBA/OCBAms.m) is a modified compared policy from Chen et al. (2008), where the original policy is implemeted in a sequential manner.
+* The function [OCBAms.m](src/App/OCBA/OCBAms.m) is a modified compared policy from Chen et al. (2008), where the original policy is implemeted in a sequential manner.
 
-Get into the folder [OCBA](/App/OCBA). Run [EAm.m](/main/Exp/EAm.m) for *EA*, [OCBAm.m](/App/OCBA/OCBAm.m) for *OCBAm(two-stage)*, [OCBAms.m](/App/OCBA/OCBAms.m) for *OCBAm(sequential)*, [OCBAmsa.m](/main/Exp/OCBAmsa.m) for *OCBAm*, and [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*.
+Get into the folder [OCBA](src/App/OCBA). Run [EAm.m](src/main/Exp/EAm.m) for *EA*, [OCBAm.m](src/App/OCBA/OCBAm.m) for *OCBAm(two-stage)*, [OCBAms.m](src/App/OCBA/OCBAms.m) for *OCBAm(sequential)*, [OCBAmsa.m](src/main/Exp/OCBAmsa.m) for *OCBAm*, and [AOAPm.m](src/main/Exp/AOAPm.m) for *AOAm*.
 
-* Set corresponding input parameters for all policies in the folder [OCBA](/App/OCBA) and [Exp](/main/Exp).
+* Set corresponding input parameters for all policies in the folder [OCBA](src/App/OCBA) and [Exp](src/main/Exp).
 
 #### Numerical Experiments in Section A.3 of the online Appendix
 
-* The function [AOAPm.m](/App/Sampling%20ratio/AOAPm.m) is our proposed policy, where the output is the sampling ratio for each simulation budget.
+* The function [AOAPm.m](src/App/Sampling%20ratio/AOAPm.m) is our proposed policy, where the output is the sampling ratio for each simulation budget.
 
-Get into folder [Sampling ratio](/App/Sampling%20ratio). Run [AOAPm.m](/App/Sampling%20ratio/AOAPm.m) for calculating its sampling ratios.
+Get into folder [Sampling ratio](src/App/Sampling%20ratio). Run [AOAPm.m](src/App/Sampling%20ratio/AOAPm.m) for calculating its sampling ratios.
 
 #### Numerical Experiments in Section A.4.1 of the online Appendix
 
-Run [EAm.m](/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](/main/Exp/OCBAss.m) for *OCBAsst*, [OCBASSS.m](/main/Exp/OCBASSS.m) for *OCBASSt*, and [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*.
+Run [EAm.m](src/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](src/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](src/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](src/main/Exp/OCBAss.m) for *OCBAsst*, [OCBASSS.m](src/main/Exp/OCBASSS.m) for *OCBASSt*, and [AOAPm.m](src/main/Exp/AOAPm.m) for *AOAm*.
 
 * Set corresponding input parameters for all policies.
 
 #### Numerical Experiments in Section A.4.2.1 and A.4.2.2 of the online Appendix
 
-Run [EAm.m](/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*.
+Run [EAm.m](src/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](src/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](src/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](src/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](src/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](src/main/Exp/AOAPm.m) for *AOAm*.
 
 * Set corresponding input parameters for all policies.
 
 #### Numerical Experiments in Section A.4.2.3 of the online Appendix
 
-* The function [queueing.m](/App/Non-normal/Queueing/queueing.m) is a simulator of a two-node tandem queueing system;
+* The function [queueing.m](src/App/Non-normal/Queueing/queueing.m) is a simulator of a two-node tandem queueing system;
 
-* The function [truevalue.m](/App/Non-normal/Queueing/truevalue.m) estimates the mean performance of each worker allocation plan.
+* The function [truevalue.m](src/App/Non-normal/Queueing/truevalue.m) estimates the mean performance of each worker allocation plan.
 
-Get into folder [Queueing](/App/Non-normal/Queueing). Run [EAm.m](/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*.
+Get into folder [Queueing](src/App/Non-normal/Queueing). Run [EAm.m](src/main/Exp/EAm.m) for *EA*, [OCBAmsa.m](src/main/Exp/OCBAmsa.m) for *OCBAm*, [OCBAmjia.m](src/main/Exp/OCBAmjia.m) for *OCBAm+*, [OCBAss.m](src/main/Exp/OCBAss.m) for *OCBAss*, [OCBASSS.m](src/main/Exp/OCBASSS.m) for *OCBASS*, and [AOAPm.m](src/main/Exp/AOAPm.m) for *AOAm*.
 
 * Set corresponding input parameters for all policies;
-* The input parameter *truemu* of each policy is calculated by running [truevalue.m](/App/Non-normal/Queueing/truevalue.m), which calls [queueing.m](/App/Non-normal/Queueing/queueing.m) during execution.
+* The input parameter *truemu* of each policy is calculated by running [truevalue.m](src/App/Non-normal/Queueing/truevalue.m), which calls [queueing.m](src/App/Non-normal/Queueing/queueing.m) during execution.
 
 #### Numerical Experiments in Section A.4.3 of the online Appendix
 
-* The function [pSAR.m](/App/Top-m%20arms%20identification/pSAR.m) is a compared policy from Bubeck et al. (2013);
+* The function [pSAR.m](src/App/Top-m%20arms%20identification/pSAR.m) is a compared policy from Bubeck et al. (2013);
 
-* The function [pSR.m](/App/Top-m%20arms%20identification/pSR.m) is a compared policy from Audibert et al. (2010) and is then modified by Bubeck et al. (2013);
+* The function [pSR.m](src/App/Top-m%20arms%20identification/pSR.m) is a compared policy from Audibert et al. (2010) and is then modified by Bubeck et al. (2013);
 
-* The function [pGapE.m](/App/Top-m%20arms%20identification/pGapE.m) is a compared policy from Gabillon et al. (2011) and is then modified by Bubeck et al. (2013).
+* The function [pGapE.m](src/App/Top-m%20arms%20identification/pGapE.m) is a compared policy from Gabillon et al. (2011) and is then modified by Bubeck et al. (2013).
 
 Remark:
 * The policies can adjust sampling distributions;
 * Update parameters in the same way when comparing;
 * The independent macro experiments can run in parallel.
 
-Get into folder [Top-m arms identification](/App/Top-m%20arms%20identification). Run [EAm.m](/main/Exp/EAm.m) for *EA*, [AOAPm.m](/main/Exp/AOAPm.m) for *AOAm*, [pGapE.m](/App/Top-m%20arms%20identification/pGapE.m) for *Gap-E*, [pSAR.m](/App/Top-m%20arms%20identification/pSAR.m) for *SAR*, [pSR.m](/App/Top-m%20arms%20identification/pSR.m) for *SR*.
+Get into folder [Top-m arms identification](src/App/Top-m%20arms%20identification). Run [EAm.m](src/main/Exp/EAm.m) for *EA*, [AOAPm.m](src/main/Exp/AOAPm.m) for *AOAm*, [pGapE.m](src/App/Top-m%20arms%20identification/pGapE.m) for *Gap-E*, [pSAR.m](src/App/Top-m%20arms%20identification/pSAR.m) for *SAR*, [pSR.m](src/App/Top-m%20arms%20identification/pSR.m) for *SR*.
 
 * Set corresponding input parameters for all policies.
 
 ## Results
 
-* The folder [Results](Results) contains the results of each figure in the numerical experiments in the main body of the paper.
+* The folder [results](results) contains the results of each figure in the numerical experiments in the main body of the paper.
 * Due to the random nature of the simulation experiments and the absence of fixed random seeds in the code, the results may vary slightly when reproducing the experiment.
 * Each row of the matrix corresponds to the numerical results of *EA*, *OCBAm*, *OCBAm+*, *OCBAss*, *OCBASS*, and *AOAm*, respectively.
 
